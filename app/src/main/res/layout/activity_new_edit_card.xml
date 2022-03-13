@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AddEditConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1D23"
+    android:backgroundTint="#1A1D23"
+    tools:context=".NewCardActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/companyNameInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:textColorHint="#858585"
+        app:boxBackgroundColor="#00BDBDBD"
+        app:boxStrokeColor="#FFFFFF"
+        app:counterTextColor="@color/purple_200"
+        app:endIconMode="clear_text"
+        app:helperText="Required"
+        app:helperTextTextColor="#FF8181"
+        app:hintTextColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeholderTextColor="#858585"
+        app:prefixTextColor="#858585"
+        app:startIconTint="@color/purple_200"
+        app:suffixTextColor="#858585">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textNomeAzienda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/company_name"
+            android:maxLength="30"
+            android:textColor="#858585"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#858585"
+            android:textColorLink="#858585" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/codeInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="#00FF0000"
+        android:textColorHint="#858585"
+        app:boxStrokeColor="#FFFFFF"
+        app:counterTextColor="@color/purple_200"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/purple_200"
+        app:helperText="Required"
+        app:helperTextTextColor="#FF8181"
+        app:hintTextColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/scanButton"
+        app:layout_constraintStart_toStartOf="@+id/companyNameInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/companyNameInputLayout"
+        app:passwordToggleTint="@color/purple_200"
+        app:placeholderTextColor="#858585"
+        app:prefixTextColor="#858585"
+        app:suffixTextColor="#858585">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textQR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Code:"
+            android:textColor="#858585"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#858585"
+            android:textColorLink="#858585" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:srcCompat="@drawable/ic_baseline_check_24" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:rotation="45"
+        app:backgroundTint="#FF8181"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/buttonConfirm"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <ImageView
+        android:id="@+id/imgQR"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:background="#00000000"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@+id/companyNameInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/codeInputLayout"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@color/cardview_light_background"
+        tools:srcCompat="@color/cardview_light_background" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_marginStart="8dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imgQR"
+        app:layout_constraintStart_toEndOf="@+id/imgQR"
+        app:layout_constraintTop_toTopOf="@+id/imgQR">
+
+        <RadioButton
+            android:id="@+id/buttonSelectQR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:text="QR code"
+            android:textColor="#858585"
+            android:textColorLink="#80D9FF"
+            app:buttonTint="#858585" />
+
+        <RadioButton
+            android:id="@+id/buttonSelectBarCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Bar Code"
+            android:textColor="#858585"
+            app:buttonTint="#858585" />
+    </RadioGroup>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.47" />
+
+    <ImageButton
+        android:id="@+id/scanButton"
+        android:layout_width="62dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="@+id/codeInputLayout"
+        app:srcCompat="@drawable/ic_baseline_camera_alt_24"
+        tools:srcCompat="@drawable/ic_baseline_camera_alt_24" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/colorInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#00FF0000"
+        android:foregroundGravity="center"
+        android:textColorHint="#858585"
+        app:boxStrokeColor="#FFFFFF"
+        app:counterTextColor="@color/purple_200"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/purple_200"
+        app:helperTextTextColor="#FF8181"
+        app:hintTextColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/companyNameInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/companyNameInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/imgQR"
+        app:passwordToggleTint="@color/purple_200"
+        app:placeholderTextColor="#858585"
+        app:prefixTextColor="#858585"
+        app:suffixTextColor="#858585">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:focusable="auto"
+            android:focusableInTouchMode="false"
+            android:hint="Card color:"
+            android:maxLength="30" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonPickColor"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#96eeff"
+        android:textColor="@color/black"
+        android:textColorLink="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/colorInputLayout"
+        app:layout_constraintEnd_toEndOf="@+id/colorInputLayout"
+        app:layout_constraintStart_toStartOf="@+id/buttonCancel"
+        app:layout_constraintTop_toTopOf="@+id/colorInputLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

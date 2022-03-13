@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#858585</color>
+    <color name="purple_500">#858585</color>
+    <color name="purple_700">#000000</color>
+    <color name="teal_200">#858585</color>
+    <color name="teal_700">#858585</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#858585</color>
+    <color name="mtrl_textinput_default_box_stroke_color">#858585</color>
+</resources>
